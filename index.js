@@ -2,7 +2,8 @@ Vue.createApp({
     data() {
         return {
             name: "",
-            names: [],       
+            names: [],
+            showTable: false,       
         };
     },
     methods: {

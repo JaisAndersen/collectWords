@@ -16,17 +16,17 @@
         <button class="button" @click="clearNames">Clear</button>   
         <div v-if="showTable && names.length > 0">
             <table class="table table-striped">
-                <thead>
+                <table class="table">
                     <tr>
+                        <th>Index</th>
                         <th>Name</th>
+                        <th></th>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="name in names" :key="name">
-                        <td>{{ name }}</td>
+                    <tr v-for="(name,index) in names">
+                        <td>{{index}}</td> 
+                        <td>{{name}}</td>                        
                     </tr>
-                </tbody>
-            </table>
+                </table>
         </div>
         <div v-else>{{ message }}</div>
     </div>    
